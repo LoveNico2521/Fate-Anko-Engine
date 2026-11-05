@@ -1,0 +1,1 @@
+::-webkit-scrollbar { width: 6px(M); height: 6px(M); }

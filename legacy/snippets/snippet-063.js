@@ -1,0 +1,1 @@
+boostInput.value = s.boost || 0;

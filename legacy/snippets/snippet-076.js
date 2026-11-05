@@ -1,0 +1,6 @@
+if (formulaParts.length > 1 || boost !== 0) {
+    totalSummary.innerHTML = `🧮 本輪總和：<span class="font-mono text-slate-400 mx-2">${formulaParts.join(' + ')}</span> = <span class="text-amber-400 text-lg md:text-xl ml-1">${totalSum}</span>`;
+    totalSummary.classList.remove('hidden');
+} else {
+    totalSummary.classList.add('hidden');
+}

@@ -1,0 +1,1 @@
+const formulaString = `${prefix}=${parts.join('+')}=(${totalSum})`;

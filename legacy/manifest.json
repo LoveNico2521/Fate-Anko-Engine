@@ -1,0 +1,1710 @@
+{
+  "source": "https://chat.deepseek.com/share/zfb37xu5gq7taton1v",
+  "collectedAt": "2026-11-05T16:00:12.899Z",
+  "note": "由 DeepSeek 分享頁虛擬清單捲動收集；raw 285 區塊、標準化後 282 唯一內容",
+  "fullVersions": [
+    {
+      "file": "full-versions/v01.html",
+      "chars": 20973,
+      "order": 17,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v02.html",
+      "chars": 20840,
+      "order": 18,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v03.html",
+      "chars": 22082,
+      "order": 21,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v04.html",
+      "chars": 23966,
+      "order": 22,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v05.html",
+      "chars": 23773,
+      "order": 23,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v06.html",
+      "chars": 23949,
+      "order": 24,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v07.html",
+      "chars": 23961,
+      "order": 25,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v08.html",
+      "chars": 23987,
+      "order": 26,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v09.html",
+      "chars": 23985,
+      "order": 27,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v10.html",
+      "chars": 24706,
+      "order": 49,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v11.html",
+      "chars": 26016,
+      "order": 57,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v12.html",
+      "chars": 26069,
+      "order": 63,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v13.html",
+      "chars": 27470,
+      "order": 67,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v14.html",
+      "chars": 2294,
+      "order": 109,
+      "aka": [
+        "v1.html"
+      ]
+    },
+    {
+      "file": "full-versions/v15.html",
+      "chars": 28017,
+      "order": 132,
+      "aka": [
+        "v2.html"
+      ]
+    },
+    {
+      "file": "full-versions/v16.html",
+      "chars": 29871,
+      "order": 134,
+      "aka": [
+        "v3.html"
+      ]
+    },
+    {
+      "file": "full-versions/v17.html",
+      "chars": 30382,
+      "order": 138,
+      "aka": [
+        "v4-final.html"
+      ]
+    },
+    {
+      "file": "full-versions/v18.html",
+      "chars": 30990,
+      "order": 146,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v19.html",
+      "chars": 30988,
+      "order": 148,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v20.html",
+      "chars": 36536,
+      "order": 161,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v21.html",
+      "chars": 36538,
+      "order": 164,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v22.html",
+      "chars": 36177,
+      "order": 172,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v23.html",
+      "chars": 35210,
+      "order": 180,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v24.html",
+      "chars": 35262,
+      "order": 189,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v25.html",
+      "chars": 35261,
+      "order": 190,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v26.html",
+      "chars": 35227,
+      "order": 197,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v27.html",
+      "chars": 35226,
+      "order": 198,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v28.html",
+      "chars": 37504,
+      "order": 203,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v29.html",
+      "chars": 39162,
+      "order": 207,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v30.html",
+      "chars": 39165,
+      "order": 216,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v31.html",
+      "chars": 39192,
+      "order": 219,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v32.html",
+      "chars": 40383,
+      "order": 224,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v33.html",
+      "chars": 40400,
+      "order": 234,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v34.html",
+      "chars": 40361,
+      "order": 236,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v35.html",
+      "chars": 10475,
+      "order": 239,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v36.html",
+      "chars": 40628,
+      "order": 245,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v37.html",
+      "chars": 41081,
+      "order": 250,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v38.html",
+      "chars": 40401,
+      "order": 251,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v39.html",
+      "chars": 35046,
+      "order": 256,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v40.html",
+      "chars": 41604,
+      "order": 267,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v41.html",
+      "chars": 44083,
+      "order": 271,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v42.html",
+      "chars": 41511,
+      "order": 273,
+      "aka": []
+    },
+    {
+      "file": "full-versions/v43.html",
+      "chars": 41437,
+      "order": 280,
+      "aka": []
+    }
+  ],
+  "desktop": [
+    {
+      "file": "desktop/py-01.py",
+      "chars": 700,
+      "order": 140,
+      "first": "import webview import os import sys def get_resource_path(re"
+    },
+    {
+      "file": "desktop/py-02.py",
+      "chars": 735,
+      "order": 142,
+      "first": "import webview import os import sys def get_resource_path(re"
+    },
+    {
+      "file": "desktop/py-03.py",
+      "chars": 1493,
+      "order": 145,
+      "first": "import webview import os import sys import tkinter as tk fro"
+    },
+    {
+      "file": "desktop/py-04.py",
+      "chars": 1510,
+      "order": 147,
+      "first": "import webview import os import sys import tkinter as tk fro"
+    },
+    {
+      "file": "desktop/py-05.py",
+      "chars": 147,
+      "order": 149,
+      "first": "from PIL import Image img = Image.open(\"fate.png\") img.save("
+    },
+    {
+      "file": "desktop/py-06.py",
+      "chars": 183,
+      "order": 150,
+      "first": "from PIL import Image img = Image.open(\"fate.png\") # 儲存為包含多種"
+    },
+    {
+      "file": "desktop/py-07.py",
+      "chars": 1511,
+      "order": 162,
+      "first": "import webview import os import sys import tkinter as tk fro"
+    },
+    {
+      "file": "desktop/py-08.py",
+      "chars": 1475,
+      "order": 173,
+      "first": "import webview import os import sys import tkinter as tk fro"
+    },
+    {
+      "file": "desktop/py-09.py",
+      "chars": 1465,
+      "order": 181,
+      "first": "import webview import os import sys import tkinter as tk fro"
+    }
+  ],
+  "snippets": [
+    {
+      "file": "snippets/snippet-001.js",
+      "chars": 202,
+      "order": 0,
+      "first": "if (currentOutcome === initialChainOutcome) { currentStack++"
+    },
+    {
+      "file": "snippets/snippet-002.js",
+      "chars": 218,
+      "order": 1,
+      "first": "const currentOutcome = (d2 === 1) ? '大成功' : '大失敗'; step.outc"
+    },
+    {
+      "file": "snippets/snippet-003.js",
+      "chars": 109,
+      "order": 2,
+      "first": "const currentOutcome = '大成功'; if (!initialChainOutcome) init"
+    },
+    {
+      "file": "snippets/snippet-004.js",
+      "chars": 117,
+      "order": 3,
+      "first": "const final100 = raw100 + boost; let isSuccess = (mode === '"
+    },
+    {
+      "file": "snippets/snippet-005.js",
+      "chars": 30,
+      "order": 4,
+      "first": "const final10 = raw10 + boost;"
+    },
+    {
+      "file": "snippets/snippet-006.js",
+      "chars": 68,
+      "order": 5,
+      "first": "} else { const sides = parseInt(dieType.replace('d', '')); ."
+    },
+    {
+      "file": "snippets/snippet-007.js",
+      "chars": 157,
+      "order": 6,
+      "first": "for (let i = 0; i < count; i++) { const run = rollChainEngin"
+    },
+    {
+      "file": "snippets/snippet-008.js",
+      "chars": 523,
+      "order": 7,
+      "first": "} else { const sides = parseInt(dieType.replace('d', '')); c"
+    },
+    {
+      "file": "snippets/snippet-009.js",
+      "chars": 243,
+      "order": 8,
+      "first": "if (currentLevel > 0) { currentLevel--; let prevDie = getDie"
+    },
+    {
+      "file": "snippets/snippet-010.js",
+      "chars": 196,
+      "order": 9,
+      "first": "if (currentOutcome === initialChainOutcome) { currentStack++"
+    },
+    {
+      "file": "snippets/snippet-011.js",
+      "chars": 54,
+      "order": 10,
+      "first": "::-webkit-scrollbar { width: 6px(M); height: 6px(M); }"
+    },
+    {
+      "file": "snippets/snippet-012.js",
+      "chars": 48,
+      "order": 11,
+      "first": "::-webkit-scrollbar { width: 6px; height: 6px; }"
+    },
+    {
+      "file": "snippets/snippet-013.js",
+      "chars": 87,
+      "order": 12,
+      "first": "::-webkit-scrollbar-thumb { background: rgba(51, 65, 85, 0.8"
+    },
+    {
+      "file": "snippets/snippet-014.js",
+      "chars": 84,
+      "order": 13,
+      "first": "::-webkit-scrollbar-thumb { background: rgba(51, 65, 85, 0.8"
+    },
+    {
+      "file": "snippets/snippet-015.js",
+      "chars": 137,
+      "order": 14,
+      "first": "step.msg = `${currentOutcome === '大成功' ? '✨' : '💥'} 1d10=10"
+    },
+    {
+      "file": "snippets/snippet-016.js",
+      "chars": 138,
+      "order": 15,
+      "first": "step.msg = `${currentOutcome === '大成功' ? '✨' : '💥'} 1d10=10"
+    },
+    {
+      "file": "snippets/snippet-017.js",
+      "chars": 162,
+      "order": 16,
+      "first": "step.msg = `${currentOutcome === '大成功' ? '✨' : '💥'} 1d10=10"
+    },
+    {
+      "file": "snippets/snippet-018.js",
+      "chars": 282,
+      "order": 19,
+      "first": "<div class=\"flex items-center gap-2\"> <button onclick=\"expor"
+    },
+    {
+      "file": "snippets/snippet-019.js",
+      "chars": 833,
+      "order": 20,
+      "first": "function exportHistoryToCSV() { if (history.length === 0) { "
+    },
+    {
+      "file": "snippets/snippet-020.js",
+      "chars": 58,
+      "order": 28,
+      "first": "window.addEventListener('DOMContentLoaded', loadSettings);"
+    },
+    {
+      "file": "snippets/snippet-021.js",
+      "chars": 112,
+      "order": 29,
+      "first": "let count = parseInt(countInput.value) || 1; count = Math.ma"
+    },
+    {
+      "file": "snippets/snippet-022.js",
+      "chars": 246,
+      "order": 30,
+      "first": "document.addEventListener('keydown', function(e) { if (e.tar"
+    },
+    {
+      "file": "snippets/snippet-023.js",
+      "chars": 356,
+      "order": 31,
+      "first": "historyLog.innerHTML = history.map(item => ` <div class=\"fle"
+    },
+    {
+      "file": "snippets/snippet-024.js",
+      "chars": 227,
+      "order": 32,
+      "first": "let csvContent = \"\\uFEFF時間,安科織夢紀錄\\n\"; const reversedHistory "
+    },
+    {
+      "file": "snippets/snippet-025.js",
+      "chars": 329,
+      "order": 33,
+      "first": "function loadSettings() { const savedSettings = localStorage"
+    },
+    {
+      "file": "snippets/snippet-026.js",
+      "chars": 117,
+      "order": 34,
+      "first": "<div id=\"history-log\" class=\"flex-1 overflow-y-auto text-xs "
+    },
+    {
+      "file": "snippets/snippet-027.js",
+      "chars": 127,
+      "order": 35,
+      "first": "if (history.length === 0) { historyLog.innerHTML = `<div cla"
+    },
+    {
+      "file": "snippets/snippet-028.js",
+      "chars": 129,
+      "order": 36,
+      "first": "document.addEventListener('keydown', function(e) { if (e.tar"
+    },
+    {
+      "file": "snippets/snippet-029.js",
+      "chars": 29,
+      "order": 37,
+      "first": "setCheckMode(s.mode || 'ra');"
+    },
+    {
+      "file": "snippets/snippet-030.js",
+      "chars": 95,
+      "order": 38,
+      "first": "if (e.code === 'Space' || e.key === 'Enter') { e.preventDefa"
+    },
+    {
+      "file": "snippets/snippet-031.js",
+      "chars": 176,
+      "order": 39,
+      "first": "function loadSettings() { const savedSettings = localStorage"
+    },
+    {
+      "file": "snippets/snippet-032.js",
+      "chars": 112,
+      "order": 40,
+      "first": "function loadSettings() { const savedSettings = localStorage"
+    },
+    {
+      "file": "snippets/snippet-033.js",
+      "chars": 526,
+      "order": 41,
+      "first": "function executeRoll(type) { playAnimation(); // 执行 let coun"
+    },
+    {
+      "file": "snippets/snippet-034.js",
+      "chars": 42,
+      "order": 42,
+      "first": "if (e.target.tagName === 'BUTTON') return;"
+    },
+    {
+      "file": "snippets/snippet-035.js",
+      "chars": 142,
+      "order": 43,
+      "first": "if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I"
+    },
+    {
+      "file": "snippets/snippet-036.js",
+      "chars": 172,
+      "order": 44,
+      "first": "if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I"
+    },
+    {
+      "file": "snippets/snippet-037.js",
+      "chars": 59,
+      "order": 45,
+      "first": "historyLog.innerHTML = history.map(item => `...`).join('');"
+    },
+    {
+      "file": "snippets/snippet-038.js",
+      "chars": 353,
+      "order": 46,
+      "first": "function loadSettings() { const savedSettings = localStorage"
+    },
+    {
+      "file": "snippets/snippet-039.js",
+      "chars": 440,
+      "order": 47,
+      "first": "function safeLocalStorageGet(key, fallback) { try { const va"
+    },
+    {
+      "file": "snippets/snippet-040.js",
+      "chars": 472,
+      "order": 48,
+      "first": "document.addEventListener('keydown', function(e) { // 跳过输入字段"
+    },
+    {
+      "file": "snippets/snippet-041.js",
+      "chars": 172,
+      "order": 50,
+      "first": "const summaryText = `${count}x ${type}${boostText} [${checkM"
+    },
+    {
+      "file": "snippets/snippet-042.js",
+      "chars": 123,
+      "order": 51,
+      "first": "const step = { levelStr, type: '1d100', raw: raw100, final: "
+    },
+    {
+      "file": "snippets/snippet-043.js",
+      "chars": 195,
+      "order": 52,
+      "first": "function getRunDetails(run) { return run.steps.map(s => { le"
+    },
+    {
+      "file": "snippets/snippet-044.js",
+      "chars": 471,
+      "order": 53,
+      "first": "let detailParts = allRuns.map((run, idx) => { let runStr = g"
+    },
+    {
+      "file": "snippets/snippet-045.js",
+      "chars": 585,
+      "order": 54,
+      "first": "historyLog.innerHTML = history.map(item => ` <div class=\"fle"
+    },
+    {
+      "file": "snippets/snippet-046.js",
+      "chars": 252,
+      "order": 55,
+      "first": "let csvContent = \"\\uFEFF時間,摘要,詳細骰子\\n\"; ... const safeSummary"
+    },
+    {
+      "file": "snippets/snippet-047.js",
+      "chars": 537,
+      "order": 56,
+      "first": "let detailArr = []; allRuns.forEach((run, idx) => { let step"
+    },
+    {
+      "file": "snippets/snippet-048.js",
+      "chars": 588,
+      "order": 58,
+      "first": "<!-- 頂部標題列 --> <div class=\"flex flex-col md:flex-row md:item"
+    },
+    {
+      "file": "snippets/snippet-049.js",
+      "chars": 581,
+      "order": 59,
+      "first": "<!-- 頂部標題列 --> <div class=\"flex flex-col md:flex-row md:item"
+    },
+    {
+      "file": "snippets/snippet-050.js",
+      "chars": 37,
+      "order": 60,
+      "first": "<title>《Fate》安科織夢機 - 劇情推演系統</title>"
+    },
+    {
+      "file": "snippets/snippet-051.js",
+      "chars": 37,
+      "order": 61,
+      "first": "<title>織夢者菲特《Fate》 - 劇情推演系統</title>"
+    },
+    {
+      "file": "snippets/snippet-052.js",
+      "chars": 199,
+      "order": 62,
+      "first": "<div id=\"empty-state\" class=\"h-full flex flex-col items-cent"
+    },
+    {
+      "file": "snippets/snippet-053.js",
+      "chars": 44,
+      "order": 64,
+      "first": "1d10 = 5 1d10 = 4 ---------------- 5 + 4 = 9"
+    },
+    {
+      "file": "snippets/snippet-054.js",
+      "chars": 262,
+      "order": 65,
+      "first": "<!-- 总和显示区 --> <div id=\"total-summary\" class=\"hidden h-auto "
+    },
+    {
+      "file": "snippets/snippet-055.js",
+      "chars": 735,
+      "order": 66,
+      "first": "let totalSum = 0; let formulaParts = []; allRuns.forEach(run"
+    },
+    {
+      "file": "snippets/snippet-056.js",
+      "chars": 46,
+      "order": 68,
+      "first": "const boost = parseInt(boostInput.value) || 0;"
+    },
+    {
+      "file": "snippets/snippet-057.js",
+      "chars": 281,
+      "order": 69,
+      "first": "allRuns.forEach(run => { run.steps.forEach(s => { totalSum +"
+    },
+    {
+      "file": "snippets/snippet-058.js",
+      "chars": 32,
+      "order": 70,
+      "first": "const final100 = raw100 + boost;"
+    },
+    {
+      "file": "snippets/snippet-059.js",
+      "chars": 160,
+      "order": 71,
+      "first": "let count = parseInt(countInput.value) || 1; count = Math.ma"
+    },
+    {
+      "file": "snippets/snippet-060.js",
+      "chars": 171,
+      "order": 72,
+      "first": "if (boost !== 0) { const boostStr = boost > 0 ? `+${boost}` "
+    },
+    {
+      "file": "snippets/snippet-061.js",
+      "chars": 20,
+      "order": 73,
+      "first": "totalSum += s.final;"
+    },
+    {
+      "file": "snippets/snippet-062.js",
+      "chars": 53,
+      "order": 74,
+      "first": "<input id=\"base-boost\" type=\"number\" value=\"0\" ... />"
+    },
+    {
+      "file": "snippets/snippet-063.js",
+      "chars": 32,
+      "order": 75,
+      "first": "boostInput.value = s.boost || 0;"
+    },
+    {
+      "file": "snippets/snippet-064.js",
+      "chars": 180,
+      "order": 76,
+      "first": "function loadSettings() { const s = safeGet('fate_dreamweave"
+    },
+    {
+      "file": "snippets/snippet-065.js",
+      "chars": 45,
+      "order": 77,
+      "first": "if (formulaParts.length > 1 || boost !== 0) {"
+    },
+    {
+      "file": "snippets/snippet-066.js",
+      "chars": 141,
+      "order": 78,
+      "first": "function rollChainEngine(startType, boost, targetVal, mode) "
+    },
+    {
+      "file": "snippets/snippet-067.js",
+      "chars": 188,
+      "order": 79,
+      "first": "totalSummary.innerHTML = `🧮 本輪總和：<span class=\"font-mono tex"
+    },
+    {
+      "file": "snippets/snippet-068.js",
+      "chars": 227,
+      "order": 80,
+      "first": "function executeRoll(type) { playAnimation(); let count = pa"
+    },
+    {
+      "file": "snippets/snippet-069.js",
+      "chars": 77,
+      "order": 81,
+      "first": "const boostText = boost !== 0 ? ` (B:${boost >= 0 ? '+' : ''"
+    },
+    {
+      "file": "snippets/snippet-070.js",
+      "chars": 128,
+      "order": 82,
+      "first": "function adjustBoost(delta) { let val = parseInt(boostInput."
+    },
+    {
+      "file": "snippets/snippet-071.js",
+      "chars": 323,
+      "order": 83,
+      "first": "let totalSum = 0; let formulaParts = []; allRuns.forEach(run"
+    },
+    {
+      "file": "snippets/snippet-072.js",
+      "chars": 236,
+      "order": 84,
+      "first": "if (formulaParts.length > 1 || boost !== 0) { totalSummary.i"
+    },
+    {
+      "file": "snippets/snippet-073.js",
+      "chars": 115,
+      "order": 85,
+      "first": "if (dieType === '1d100') { const raw100 = Math.floor(Math.ra"
+    },
+    {
+      "file": "snippets/snippet-074.js",
+      "chars": 41,
+      "order": 86,
+      "first": "let step = { ..., final: final100, ... };"
+    },
+    {
+      "file": "snippets/snippet-075.js",
+      "chars": 114,
+      "order": 87,
+      "first": "if (raw10 === 10) { const d2 = Math.floor(Math.random() * 2)"
+    },
+    {
+      "file": "snippets/snippet-076.js",
+      "chars": 336,
+      "order": 88,
+      "first": "if (formulaParts.length > 1 || boost !== 0) { totalSummary.i"
+    },
+    {
+      "file": "snippets/snippet-077.js",
+      "chars": 335,
+      "order": 89,
+      "first": "} else if (raw100 >= 96) { const currentOutcome = '大成功'; if "
+    },
+    {
+      "file": "snippets/snippet-078.js",
+      "chars": 78,
+      "order": 90,
+      "first": "step.msg = `1d10 普通结果 ➔ 原始: ${raw10}`; steps.push(step); con"
+    },
+    {
+      "file": "snippets/snippet-079.js",
+      "chars": 117,
+      "order": 91,
+      "first": "if (run.finalStack > 0 && run.baseOutcome) { if (run.baseOut"
+    },
+    {
+      "file": "snippets/snippet-080.js",
+      "chars": 57,
+      "order": 92,
+      "first": "run.steps.forEach(s => { totalSum += s.final; ... });"
+    },
+    {
+      "file": "snippets/snippet-081.js",
+      "chars": 216,
+      "order": 93,
+      "first": "const stepBoost = s.final - s.raw; if (stepBoost !== 0) { co"
+    },
+    {
+      "file": "snippets/snippet-082.js",
+      "chars": 378,
+      "order": 94,
+      "first": "allRuns.forEach(run => { run.steps.forEach(s => { totalSum +"
+    },
+    {
+      "file": "snippets/snippet-083.js",
+      "chars": 257,
+      "order": 95,
+      "first": "function loadSettings() { const s = safeGet('fate_dreamweave"
+    },
+    {
+      "file": "snippets/snippet-084.js",
+      "chars": 51,
+      "order": 96,
+      "first": "saveSettings(); // 这个用 boostInput.value，不是 boost 变量"
+    },
+    {
+      "file": "snippets/snippet-085.js",
+      "chars": 63,
+      "order": 97,
+      "first": "const run = rollChainEngine(type, boost, targetVal, checkMod"
+    },
+    {
+      "file": "snippets/snippet-086.js",
+      "chars": 54,
+      "order": 98,
+      "first": "totalSum += s.final; // s.final 是从 rollChainEngine 返回的"
+    },
+    {
+      "file": "snippets/snippet-087.js",
+      "chars": 37,
+      "order": 99,
+      "first": "if (boost !== 0) { ... } // 判断是否显示 +N"
+    },
+    {
+      "file": "snippets/snippet-088.js",
+      "chars": 170,
+      "order": 100,
+      "first": "function saveSettings() { safeSet('fate_dreamweaver_settings"
+    },
+    {
+      "file": "snippets/snippet-089.js",
+      "chars": 321,
+      "order": 101,
+      "first": "let count = parseInt(countInput.value) || 1; count = Math.ma"
+    },
+    {
+      "file": "snippets/snippet-090.js",
+      "chars": 378,
+      "order": 102,
+      "first": "allRuns.forEach(run => { run.steps.forEach(s => { totalSum +"
+    },
+    {
+      "file": "snippets/snippet-091.js",
+      "chars": 601,
+      "order": 103,
+      "first": "<label class=\"block text-xs font-medium text-slate-300\">基础加值"
+    },
+    {
+      "file": "snippets/snippet-092.js",
+      "chars": 137,
+      "order": 104,
+      "first": "// 保险机制：确保 boost 与输入框一致 if (boostInput.value !== \"\" && parse"
+    },
+    {
+      "file": "snippets/snippet-093.js",
+      "chars": 68,
+      "order": 105,
+      "first": "let boost = parseInt(boostInput.value); if (isNaN(boost)) bo"
+    },
+    {
+      "file": "snippets/snippet-094.js",
+      "chars": 87,
+      "order": 106,
+      "first": "console.log('[Fate] Roll:', { boost, boostInput: boostInput."
+    },
+    {
+      "file": "snippets/snippet-095.js",
+      "chars": 98,
+      "order": 107,
+      "first": "// 调试输出 console.log('[Fate Debug] boostInput.value:', boostI"
+    },
+    {
+      "file": "snippets/snippet-096.js",
+      "chars": 69,
+      "order": 108,
+      "first": "function getDieType(lvl) { return lvl === 0 ? startType : '1"
+    },
+    {
+      "file": "snippets/snippet-097.js",
+      "chars": 57,
+      "order": 110,
+      "first": "3d10=9,2,10 9+2=11 <-- 等等，为什么这里是 9+2？3d10 应该是 9+2+10=21。"
+    },
+    {
+      "file": "snippets/snippet-098.js",
+      "chars": 18,
+      "order": 111,
+      "first": "3d10=9,2,10 9+2=11"
+    },
+    {
+      "file": "snippets/snippet-099.js",
+      "chars": 56,
+      "order": 112,
+      "first": "3d10=9,2,10 9+2=11 <-- 对非触发骰子求和？ 1d2=2 1d10=2 （用户自行管理）"
+    },
+    {
+      "file": "snippets/snippet-100.js",
+      "chars": 66,
+      "order": 113,
+      "first": "3d10=9,2,10 9+2+10=21 <-- 对所有 3d10 的掷骰求和，但把 10 的颜色改成别的（以表示它触"
+    },
+    {
+      "file": "snippets/snippet-101.js",
+      "chars": 31,
+      "order": 114,
+      "first": "3d10=9,2,10 9+2=11 1d2=2 1d10=2"
+    },
+    {
+      "file": "snippets/snippet-102.js",
+      "chars": 31,
+      "order": 115,
+      "first": "3d10... 9+2+10=21 并把 10 的颜色改成别的"
+    },
+    {
+      "file": "snippets/snippet-103.js",
+      "chars": 12,
+      "order": 116,
+      "first": "1d2=2 1d10=2"
+    },
+    {
+      "file": "snippets/snippet-104.js",
+      "chars": 319,
+      "order": 117,
+      "first": "let totalSum = 0; let formulaParts = []; let hasChain = fals"
+    },
+    {
+      "file": "snippets/snippet-105.js",
+      "chars": 30,
+      "order": 118,
+      "first": "3d10... 9+2+10=21 把 10 的颜色改成别的"
+    },
+    {
+      "file": "snippets/snippet-106.js",
+      "chars": 628,
+      "order": 119,
+      "first": "let totalSum = 0; let formulaParts = []; let hasChain = fals"
+    },
+    {
+      "file": "snippets/snippet-107.js",
+      "chars": 576,
+      "order": 120,
+      "first": "let totalSum = 0; let formulaParts = []; allRuns.forEach(run"
+    },
+    {
+      "file": "snippets/snippet-108.js",
+      "chars": 573,
+      "order": 121,
+      "first": "let totalSum = 0; let formulaParts = []; allRuns.forEach(run"
+    },
+    {
+      "file": "snippets/snippet-109.js",
+      "chars": 668,
+      "order": 122,
+      "first": "let totalSum = 0; let nonTriggerSum = 0; let formulaParts = "
+    },
+    {
+      "file": "snippets/snippet-110.js",
+      "chars": 351,
+      "order": 123,
+      "first": "let sumHtml = `🧮 總和：<span class=\"font-mono text-slate-400 m"
+    },
+    {
+      "file": "snippets/snippet-111.js",
+      "chars": 731,
+      "order": 124,
+      "first": "let totalSum = 0; let nonTriggerSum = 0; let formulaParts = "
+    },
+    {
+      "file": "snippets/snippet-112.js",
+      "chars": 499,
+      "order": 125,
+      "first": "if (formulaParts.length > 1 || boost !== 0) { let sumHtml = "
+    },
+    {
+      "file": "snippets/snippet-113.js",
+      "chars": 513,
+      "order": 126,
+      "first": "if (formulaParts.length > 1 || boost !== 0 || hasTrigger) { "
+    },
+    {
+      "file": "snippets/snippet-114.js",
+      "chars": 44,
+      "order": 127,
+      "first": "const boost = Number(boostInput.value) || 0;"
+    },
+    {
+      "file": "snippets/snippet-115.js",
+      "chars": 78,
+      "order": 128,
+      "first": "if (formulaParts.length > 1 || boost !== 0) { // 显示总和 } else"
+    },
+    {
+      "file": "snippets/snippet-116.js",
+      "chars": 1410,
+      "order": 129,
+      "first": "// === 計算總和 === let totalSum = 0; let nonTriggerSum = 0; let"
+    },
+    {
+      "file": "snippets/snippet-117.js",
+      "chars": 340,
+      "order": 130,
+      "first": "const boostText = boost !== 0 ? ` (B:${boost >= 0 ? '+' : ''"
+    },
+    {
+      "file": "snippets/snippet-118.js",
+      "chars": 556,
+      "order": 131,
+      "first": "let stepStrArr = run.steps.map(s => { let str = `${s.levelSt"
+    },
+    {
+      "file": "snippets/snippet-119.js",
+      "chars": 365,
+      "order": 133,
+      "first": "function rollRandom(max, debugSeq, state) { if (debugSeq && "
+    },
+    {
+      "file": "snippets/snippet-120.js",
+      "chars": 108,
+      "order": 135,
+      "first": "<div class=\"space-y-1 bg-fuchsia-950/20 border border-fuchsi"
+    },
+    {
+      "file": "snippets/snippet-121.js",
+      "chars": 390,
+      "order": 136,
+      "first": "<details class=\"group bg-fuchsia-950/20 border border-fuchsi"
+    },
+    {
+      "file": "snippets/snippet-122.js",
+      "chars": 1034,
+      "order": 137,
+      "first": "<details class=\"bg-fuchsia-950/20 border border-fuchsia-500/"
+    },
+    {
+      "file": "snippets/snippet-123.js",
+      "chars": 107,
+      "order": 139,
+      "first": "npm install -g nativefier nativefier \"你的檔案路徑/dice_machine.ht"
+    },
+    {
+      "file": "snippets/snippet-124.js",
+      "chars": 33,
+      "order": 141,
+      "first": "pip install pywebview pyinstaller"
+    },
+    {
+      "file": "snippets/snippet-125.js",
+      "chars": 74,
+      "order": 143,
+      "first": "pyinstaller --onefile --noconsole --add-data \"dice_machine.h"
+    },
+    {
+      "file": "snippets/snippet-126.js",
+      "chars": 1771,
+      "order": 144,
+      "first": "function exportHistoryToCSV() { if (!Array.isArray(history) "
+    },
+    {
+      "file": "snippets/snippet-127.js",
+      "chars": 92,
+      "order": 151,
+      "first": "pyinstaller --onefile --noconsole --add-data \"dice_machine.h"
+    },
+    {
+      "file": "snippets/snippet-128.js",
+      "chars": 100,
+      "order": 152,
+      "first": "pyinstaller --clean --onefile --noconsole --add-data \"dice_m"
+    },
+    {
+      "file": "snippets/snippet-129.js",
+      "chars": 166,
+      "order": 153,
+      "first": "function adjustCount(delta) { let val = Number(countInput.va"
+    },
+    {
+      "file": "snippets/snippet-130.js",
+      "chars": 110,
+      "order": 154,
+      "first": "let count = Number(countInput.value) || 1; count = Math.max("
+    },
+    {
+      "file": "snippets/snippet-131.js",
+      "chars": 106,
+      "order": 155,
+      "first": "<!-- 把 max=\"20\" 改成 max=\"100\" 之類的 --> <input id=\"dice-count\" "
+    },
+    {
+      "file": "snippets/snippet-132.js",
+      "chars": 158,
+      "order": 156,
+      "first": "// 在 adjustCount 裡 val = Math.max(1, Math.min(100, val + del"
+    },
+    {
+      "file": "snippets/snippet-133.js",
+      "chars": 765,
+      "order": 157,
+      "first": "function showToast(msg, type = 'info') { const container = d"
+    },
+    {
+      "file": "snippets/snippet-134.js",
+      "chars": 206,
+      "order": 158,
+      "first": "function copyHistoryToClipboard(text) { navigator.clipboard."
+    },
+    {
+      "file": "snippets/snippet-135.js",
+      "chars": 76,
+      "order": 159,
+      "first": "// 添加点击事件 item.addEventListener('click', () => copyHistoryTo"
+    },
+    {
+      "file": "snippets/snippet-136.js",
+      "chars": 637,
+      "order": 160,
+      "first": "<div id=\"confirm-modal\" class=\"fixed inset-0 bg-black/50 hid"
+    },
+    {
+      "file": "snippets/snippet-137.js",
+      "chars": 434,
+      "order": 163,
+      "first": "<!-- Left Panel --> <div class=\"...\"> <div class=\"space-y-4\""
+    },
+    {
+      "file": "snippets/snippet-138.js",
+      "chars": 288,
+      "order": 165,
+      "first": "<div class=\"col-span-1 md:col-span-4 ... flex flex-col justi"
+    },
+    {
+      "file": "snippets/snippet-139.js",
+      "chars": 285,
+      "order": 166,
+      "first": "<div class=\"col-span-1 md:col-span-4 ... flex flex-col justi"
+    },
+    {
+      "file": "snippets/snippet-140.js",
+      "chars": 569,
+      "order": 167,
+      "first": "<div class=\"col-span-1 md:col-span-4 bg-slate-950/60 border "
+    },
+    {
+      "file": "snippets/snippet-141.js",
+      "chars": 210,
+      "order": 168,
+      "first": "let isRolling = false; // 防連點鎖定 ... function executeRoll(typ"
+    },
+    {
+      "file": "snippets/snippet-142.js",
+      "chars": 343,
+      "order": 169,
+      "first": "<div class=\"space-y-2 bg-slate-900/90 border border-slate-70"
+    },
+    {
+      "file": "snippets/snippet-143.js",
+      "chars": 538,
+      "order": 170,
+      "first": "<div class=\"space-y-2 bg-slate-900/90 border border-slate-70"
+    },
+    {
+      "file": "snippets/snippet-144.js",
+      "chars": 285,
+      "order": 171,
+      "first": "window = webview.create_window( title='織夢者菲特《Fate》', url=htm"
+    },
+    {
+      "file": "snippets/snippet-145.js",
+      "chars": 265,
+      "order": 174,
+      "first": "<div class=\"space-y-4\"> <div>⚙️ 織夢參數設定</div> <div>...掷骰次数..."
+    },
+    {
+      "file": "snippets/snippet-146.js",
+      "chars": 426,
+      "order": 175,
+      "first": "<div class=\"col-span-1 md:col-span-4 ... flex flex-col justi"
+    },
+    {
+      "file": "snippets/snippet-147.js",
+      "chars": 278,
+      "order": 176,
+      "first": "<div class=\"... flex flex-col justify-between space-y-4 over"
+    },
+    {
+      "file": "snippets/snippet-148.js",
+      "chars": 635,
+      "order": 177,
+      "first": "<div class=\"col-span-1 md:col-span-4 bg-slate-950/60 border "
+    },
+    {
+      "file": "snippets/snippet-149.js",
+      "chars": 243,
+      "order": 178,
+      "first": "<div class=\"col-span-1 md:col-span-8 flex flex-col space-y-4"
+    },
+    {
+      "file": "snippets/snippet-150.js",
+      "chars": 140,
+      "order": 179,
+      "first": "<div class=\"col-span-1 md:col-span-4 bg-slate-950/60 border "
+    },
+    {
+      "file": "snippets/snippet-151.js",
+      "chars": 372,
+      "order": 182,
+      "first": "<!-- 頂部標題列 --> <div class=\"flex flex-col md:flex-row md:item"
+    },
+    {
+      "file": "snippets/snippet-152.js",
+      "chars": 68,
+      "order": 183,
+      "first": "<div class=\"w-full max-w-[1600px] md:aspect-video bg-slate-9"
+    },
+    {
+      "file": "snippets/snippet-153.js",
+      "chars": 241,
+      "order": 184,
+      "first": "<!-- 頂部標題列 --> <div class=\"flex flex-col md:flex-row md:item"
+    },
+    {
+      "file": "snippets/snippet-154.js",
+      "chars": 224,
+      "order": 185,
+      "first": "<!-- 頂部標題列 --> <div ...> ... </div> <!-- 主內容區 --> <div class"
+    },
+    {
+      "file": "snippets/snippet-155.js",
+      "chars": 85,
+      "order": 186,
+      "first": "window = webview.create_window(...) # 用户添加了另一个 window = webv"
+    },
+    {
+      "file": "snippets/snippet-156.js",
+      "chars": 313,
+      "order": 187,
+      "first": "<body class=\"bg-slate-950 text-slate-100 min-h-[100dvh] flex"
+    },
+    {
+      "file": "snippets/snippet-157.js",
+      "chars": 88,
+      "order": 188,
+      "first": "window = webview.create_window(...) window2 = webview.create"
+    },
+    {
+      "file": "snippets/snippet-158.js",
+      "chars": 101,
+      "order": 191,
+      "first": "<details class=\"bg-fuchsia-950/20 border border-fuchsia-500/"
+    },
+    {
+      "file": "snippets/snippet-159.js",
+      "chars": 112,
+      "order": 192,
+      "first": "<div class=\"col-span-1 md:col-span-4 ...\"> ... 参数 ... ... 主要"
+    },
+    {
+      "file": "snippets/snippet-160.js",
+      "chars": 115,
+      "order": 193,
+      "first": "<div class=\"col-span-1 md:col-span-8 ...\"> ... 流程图 ... ... 总"
+    },
+    {
+      "file": "snippets/snippet-161.js",
+      "chars": 130,
+      "order": 194,
+      "first": "<!-- 🧪 隱藏式測試序列 (固定在最底部) --> <details class=\"bg-fuchsia-950/"
+    },
+    {
+      "file": "snippets/snippet-162.js",
+      "chars": 118,
+      "order": 195,
+      "first": "<!-- 🧪 隱藏式測試序列 --> <details class=\"bg-fuchsia-950/20 border"
+    },
+    {
+      "file": "snippets/snippet-163.js",
+      "chars": 209,
+      "order": 196,
+      "first": "<!-- 歷史紀錄區域 --> <div class=\"h-40 md:h-44 bg-slate-950/50 ..."
+    },
+    {
+      "file": "snippets/snippet-164.js",
+      "chars": 1405,
+      "order": 199,
+      "first": "妮亞/接下來的 AI 助手你好，請載入以下「織夢者菲特《Fate》」安科骰娘 APP 的完整開發上下文，並準備好協助我進"
+    },
+    {
+      "file": "snippets/snippet-165.js",
+      "chars": 301,
+      "order": 200,
+      "first": "@keyframes pulse-glow-green { 0% { box-shadow: 0 0 0 0 rgba("
+    },
+    {
+      "file": "snippets/snippet-166.js",
+      "chars": 242,
+      "order": 201,
+      "first": "let glowClass = ''; if (s.outcome === '大成功') glowClass = 'gl"
+    },
+    {
+      "file": "snippets/snippet-167.js",
+      "chars": 441,
+      "order": 202,
+      "first": "// 在 totalSummary.innerHTML 中加上点击事件或 cursor-pointer let sumH"
+    },
+    {
+      "file": "snippets/snippet-168.js",
+      "chars": 1070,
+      "order": 204,
+      "first": "// 自動複製邏輯 if (document.getElementById('auto-copy-toggle').ch"
+    },
+    {
+      "file": "snippets/snippet-169.js",
+      "chars": 454,
+      "order": 205,
+      "first": "function loadSettings() { ... const autoCopyToggle = documen"
+    },
+    {
+      "file": "snippets/snippet-170.js",
+      "chars": 458,
+      "order": 206,
+      "first": "<!-- 自動複製開關 --> <div class=\"flex items-center justify-betwee"
+    },
+    {
+      "file": "snippets/snippet-171.js",
+      "chars": 310,
+      "order": 208,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-172.js",
+      "chars": 373,
+      "order": 209,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-173.js",
+      "chars": 360,
+      "order": 210,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-174.js",
+      "chars": 308,
+      "order": 211,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-175.js",
+      "chars": 1098,
+      "order": 212,
+      "first": "// === 自動複製公式 === if (autoCopyToggle.checked) { const parts "
+    },
+    {
+      "file": "snippets/snippet-176.js",
+      "chars": 163,
+      "order": 213,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-177.js",
+      "chars": 161,
+      "order": 214,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-178.js",
+      "chars": 109,
+      "order": 215,
+      "first": "let partStr = boost !== 0 ? `(${initialStep.raw}${boost > 0 "
+    },
+    {
+      "file": "snippets/snippet-179.js",
+      "chars": 67,
+      "order": 217,
+      "first": "const formulaString = `${prefix}=${parts.join('+')}=(${total"
+    },
+    {
+      "file": "snippets/snippet-180.js",
+      "chars": 65,
+      "order": 218,
+      "first": "const formulaString = `${prefix}=${parts.join('+')}=${totalS"
+    },
+    {
+      "file": "snippets/snippet-181.js",
+      "chars": 419,
+      "order": 220,
+      "first": "if (dieType === '1d100') { let raw100; let boostMode = docum"
+    },
+    {
+      "file": "snippets/snippet-182.js",
+      "chars": 411,
+      "order": 221,
+      "first": "<div class=\"space-y-1\"> <label class=\"block text-xs font-med"
+    },
+    {
+      "file": "snippets/snippet-183.js",
+      "chars": 520,
+      "order": 222,
+      "first": "function rollChainEngine(startType, boost, targetVal, mode, "
+    },
+    {
+      "file": "snippets/snippet-184.js",
+      "chars": 278,
+      "order": 223,
+      "first": "if (dieType === '1d100') { let raw100; if (boostMode100 === "
+    },
+    {
+      "file": "snippets/snippet-185.js",
+      "chars": 1548,
+      "order": 225,
+      "first": "if (dieType === '1d100') { let raw100; let sides = 100; if ("
+    },
+    {
+      "file": "snippets/snippet-186.js",
+      "chars": 1373,
+      "order": 226,
+      "first": "if (dieType === '1d100') { let sides = 100; if (boostMode100"
+    },
+    {
+      "file": "snippets/snippet-187.js",
+      "chars": 405,
+      "order": 227,
+      "first": "<select id=\"boost-mode-100\" onchange=\"saveSettings()\" class="
+    },
+    {
+      "file": "snippets/snippet-188.js",
+      "chars": 132,
+      "order": 228,
+      "first": "let isCF = false; if (boostMode100 === 'v1' || boostMode100 "
+    },
+    {
+      "file": "snippets/snippet-189.js",
+      "chars": 42,
+      "order": 229,
+      "first": "if (isCS) { ... } else if (isCF) { ... }"
+    },
+    {
+      "file": "snippets/snippet-190.js",
+      "chars": 91,
+      "order": 230,
+      "first": "step.msg = `🎲 1d100 = ${raw100} (CF: 1~5) ➔ 進入 s${currentLe"
+    },
+    {
+      "file": "snippets/snippet-191.js",
+      "chars": 93,
+      "order": 231,
+      "first": "if (boostMode100 === 'v1' || boostMode100 === 'v3') { sides "
+    },
+    {
+      "file": "snippets/snippet-192.js",
+      "chars": 1375,
+      "order": 232,
+      "first": "if (dieType === '1d100') { let sides = 100; if (boostMode100"
+    },
+    {
+      "file": "snippets/snippet-193.js",
+      "chars": 175,
+      "order": 233,
+      "first": "<option value=\"v1\">v1: 降面 1d(100-Boost) + Boost (保留CF)</opti"
+    },
+    {
+      "file": "snippets/snippet-194.js",
+      "chars": 281,
+      "order": 235,
+      "first": "if (dieType === '1d100') { let sides = 100; if (boostMode100"
+    },
+    {
+      "file": "snippets/snippet-195.js",
+      "chars": 81,
+      "order": 237,
+      "first": "let isCF = (boostMode100 !== 'v3') && (raw100 <= 5); let isC"
+    },
+    {
+      "file": "snippets/snippet-196.js",
+      "chars": 188,
+      "order": 238,
+      "first": "let sides = 100; if (boostMode100 === 'v1' || boostMode100 ="
+    },
+    {
+      "file": "snippets/snippet-197.js",
+      "chars": 850,
+      "order": 240,
+      "first": "if (dieType === '1d100') { let sides = 100; if (boostMode100"
+    },
+    {
+      "file": "snippets/snippet-198.js",
+      "chars": 607,
+      "order": 241,
+      "first": "let sides = 100; if (boostMode100 === 'v1') { sides = Math.m"
+    },
+    {
+      "file": "snippets/snippet-199.js",
+      "chars": 1153,
+      "order": 242,
+      "first": "if (dieType === '1d100') { let sides = 100; if (boostMode100"
+    },
+    {
+      "file": "snippets/snippet-200.js",
+      "chars": 144,
+      "order": 243,
+      "first": "step.msg = `🎲 1d100 = ${raw100} (CF: ${boostMode100 === 'v3"
+    },
+    {
+      "file": "snippets/snippet-201.js",
+      "chars": 481,
+      "order": 244,
+      "first": "<select id=\"boost-mode-100\" onchange=\"saveSettings()\" class="
+    },
+    {
+      "file": "snippets/snippet-202.js",
+      "chars": 638,
+      "order": 246,
+      "first": "if (dieType === '1d100') { let sides = 100; let final100; if"
+    },
+    {
+      "file": "snippets/snippet-203.js",
+      "chars": 761,
+      "order": 247,
+      "first": "if (dieType === '1d100') { let sides = 100; let raw100, fina"
+    },
+    {
+      "file": "snippets/snippet-204.js",
+      "chars": 154,
+      "order": 248,
+      "first": "let delta = initialStep.final - initialStep.raw; let partStr"
+    },
+    {
+      "file": "snippets/snippet-205.js",
+      "chars": 338,
+      "order": 249,
+      "first": "const parts = allRuns.map(run => { const step = run.steps[0]"
+    },
+    {
+      "file": "snippets/snippet-206.js",
+      "chars": 541,
+      "order": 252,
+      "first": "allRuns.forEach(run => { const lastStep = run.steps[run.step"
+    },
+    {
+      "file": "snippets/snippet-207.js",
+      "chars": 754,
+      "order": 253,
+      "first": "function renderTotalSum(allRuns, boost) { let totalSum = 0; "
+    },
+    {
+      "file": "snippets/snippet-208.js",
+      "chars": 298,
+      "order": 254,
+      "first": "if (autoCopyToggle.checked) { const parts = allRuns.map(run "
+    },
+    {
+      "file": "snippets/snippet-209.js",
+      "chars": 238,
+      "order": 255,
+      "first": "const parts = allRuns.map(run => { const lastStep = run.step"
+    },
+    {
+      "file": "snippets/snippet-210.js",
+      "chars": 163,
+      "order": 257,
+      "first": "} else if (isCF) { step.outcome = 'DF-Trigger'; currentLevel"
+    },
+    {
+      "file": "snippets/snippet-211.js",
+      "chars": 163,
+      "order": 258,
+      "first": "} else if (isCF) { step.outcome = 'DF-Trigger'; if (!initial"
+    },
+    {
+      "file": "snippets/snippet-212.js",
+      "chars": 232,
+      "order": 259,
+      "first": "let finalS0Step = null; for (let i = run.steps.length - 1; i"
+    },
+    {
+      "file": "snippets/snippet-213.js",
+      "chars": 225,
+      "order": 260,
+      "first": "// Find the LAST s0 step let s0Step = run.steps.find(s => s."
+    },
+    {
+      "file": "snippets/snippet-214.js",
+      "chars": 156,
+      "order": 261,
+      "first": "if (isCF) { step.outcome = 'DF-Trigger'; if (!initialChainOu"
+    },
+    {
+      "file": "snippets/snippet-215.js",
+      "chars": 895,
+      "order": 262,
+      "first": "function renderTotalSum(allRuns, boost) { let totalSum = 0; "
+    },
+    {
+      "file": "snippets/snippet-216.js",
+      "chars": 447,
+      "order": 263,
+      "first": "if (autoCopyToggle.checked) { const parts = allRuns.map(run "
+    },
+    {
+      "file": "snippets/snippet-217.js",
+      "chars": 324,
+      "order": 264,
+      "first": "} else if (isCF) { step.outcome = 'DF-Trigger'; if (!initial"
+    },
+    {
+      "file": "snippets/snippet-218.js",
+      "chars": 465,
+      "order": 265,
+      "first": "} else { if (currentStack > 0) currentStack--; if (currentLe"
+    },
+    {
+      "file": "snippets/snippet-219.js",
+      "chars": 397,
+      "order": 266,
+      "first": "function renderTotalSum(allRuns, boost) { let totalSum = 0; "
+    },
+    {
+      "file": "snippets/snippet-220.js",
+      "chars": 890,
+      "order": 268,
+      "first": "@keyframes spin-bounce { 0% { transform: scale(0.5) rotate(0"
+    },
+    {
+      "file": "snippets/snippet-221.js",
+      "chars": 192,
+      "order": 269,
+      "first": "<div id=\"rolling-overlay\" class=\"rolling-overlay\"> <div clas"
+    },
+    {
+      "file": "snippets/snippet-222.js",
+      "chars": 700,
+      "order": 270,
+      "first": "function executeRoll(type) { // ... prevent double click ..."
+    },
+    {
+      "file": "snippets/snippet-223.js",
+      "chars": 329,
+      "order": 272,
+      "first": "function executeRoll(type) { // 快速动画反馈 playAnimation(); // 计"
+    },
+    {
+      "file": "snippets/snippet-224.js",
+      "chars": 252,
+      "order": 274,
+      "first": "@keyframes roll3d { 0% { transform: rotateX(0deg) rotateY(0d"
+    },
+    {
+      "file": "snippets/snippet-225.js",
+      "chars": 219,
+      "order": 275,
+      "first": "@keyframes soft-pulse { 0% { opacity: 0.5; transform: scale("
+    },
+    {
+      "file": "snippets/snippet-226.js",
+      "chars": 349,
+      "order": 276,
+      "first": "/* 保留最基本的翻滾動畫 */ @keyframes roll3d { 0% { transform: rotateX"
+    },
+    {
+      "file": "snippets/snippet-227.js",
+      "chars": 313,
+      "order": 277,
+      "first": "/* 輕微的落桌動畫（無旋轉） */ @keyframes soft-drop { 0% { transform: tr"
+    },
+    {
+      "file": "snippets/snippet-228.js",
+      "chars": 304,
+      "order": 278,
+      "first": "@keyframes roll3d { 0% { transform: rotateX(0deg) rotateY(0d"
+    },
+    {
+      "file": "snippets/snippet-229.js",
+      "chars": 266,
+      "order": 279,
+      "first": "@keyframes soft-drop { 0% { transform: translateY(-10px) sca"
+    }
+  ],
+  "readmeDraft": {
+    "file": "deepseek-readme-draft.md",
+    "chars": 198,
+    "order": 281
+  }
+}

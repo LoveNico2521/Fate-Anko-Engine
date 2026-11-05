@@ -1,0 +1,1 @@
+console.log('[Fate] Roll:', { boost, boostInput: boostInput.value, count, targetVal });

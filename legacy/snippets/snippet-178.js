@@ -1,0 +1,1 @@
+    let partStr = boost !== 0 ? `(${initialStep.raw}${boost > 0 ? '+' : ''}${boost})` : `${initialStep.raw}`;

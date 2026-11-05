@@ -1,0 +1,1 @@
+totalSum += s.final; // s.final 是从 rollChainEngine 返回的

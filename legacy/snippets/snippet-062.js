@@ -1,0 +1,1 @@
+<input id="base-boost" type="number" value="0" ... />

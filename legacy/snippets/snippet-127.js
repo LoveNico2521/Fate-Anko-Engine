@@ -1,0 +1,1 @@
+pyinstaller --onefile --noconsole --add-data "dice_machine.html;." --icon="fate.ico" main.py

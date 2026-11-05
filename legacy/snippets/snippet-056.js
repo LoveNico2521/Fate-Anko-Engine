@@ -1,0 +1,1 @@
+const boost = parseInt(boostInput.value) || 0;

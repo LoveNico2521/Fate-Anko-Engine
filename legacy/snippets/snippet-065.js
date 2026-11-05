@@ -1,0 +1,1 @@
+if (formulaParts.length > 1 || boost !== 0) {

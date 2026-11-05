@@ -1,0 +1,1 @@
+step.msg = `🎲 1d100 = ${raw100} (CF: 1~5) ➔ 進入 s${currentLevel} (1d10)！ (${checkDetail})`;

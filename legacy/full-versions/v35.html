@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>織夢者菲特《Fate》 - 劇情推演系統</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes roll3d {
+      0% { transform: rotateX(0deg) rotateY(0deg) scale(0.9); opacity: 0.6; }
+      50% { transform: rotateX(360deg) rotateY(180deg) scale(1.08); opacity: 0.95; }
+      100% { transform: rotateX(720deg) rotateY(360deg) scale(1); opacity: 1; }
+    }
+    .animate-roll { animation: roll3d 0.45s ease-out; }
+
+    /* 🌟 霓虹脈衝動畫 🌟 */
+    @keyframes glow-green {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); border-color: rgba(16, 185, 129, 1); }
+      50% { box-shadow: 0 0 15px 5px rgba(16, 185, 129, 0.4); border-color: rgba(16, 185, 129, 0.8); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); border-color: rgba(16, 185, 129, 0.4); }
+    }
+    @keyframes glow-red {
+      0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7); border-color: rgba(244, 63, 94, 1); }
+      50% { box-shadow: 0 0 15px 5px rgba(244, 63, 94, 0.4); border-color: rgba(244, 63, 94, 0.8); }
+      100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); border-color: rgba(244, 63, 94, 0.4); }
+    }
+    @keyframes glow-purple {
+      0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); border-color: rgba(168, 85, 247, 1); }
+      50% { box-shadow: 0 0 20px 8px rgba(168, 85, 247, 0.4); border-color: rgba(168, 85, 247, 0.8); }
+      100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); border-color: rgba(168, 85, 247, 0.4); }
+    }
+    .glow-cs { animation: glow-green 1.2s ease-out; }
+    .glow-cf { animation: glow-red 1.2s ease-out; }
+    .glow-high { animation: glow-purple 1.5s ease-out; }
+
+    /* 美化捲軸 */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+    ::-webkit-scrollbar-thumb { background: rgba(51, 65, 85, 0.8); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(71, 85, 105, 1); }
+
+    /* 禁用文字選取與右鍵選單 (除了輸入框) */
+    body { user-select: none; -webkit-user-select: none; }
+    input, textarea, select { user-select: auto; -webkit-user-select: auto; }
+
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+
+    /* 虛擬滾動 (大幅提升長列表效能) */
+    .virtual-scroll-item {
+      content-visibility: auto;
+      contain-intrinsic-size: 60px; 
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 h-screen flex items-center justify-center p-2 md:p-4 font-sans overflow-hidden">
+
+  <div class="w-full max-w-[1600px] h-full max-h-[900px] min-h-[800px] bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl flex flex-col p-4 md:p-6 space-y-4 overflow-hidden relative">
+    
+    <!-- 頂部標題列 -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-3 gap-2 shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-xl text-indigo-400 font-black text-sm tracking-wider uppercase shadow-[0_0_10px_rgba(99,102,241,0.2)]">
+          織夢機
+        </div>
+        <h1 class="text-xl md:text-2xl font-black bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
+          織夢者菲特《Fate》
+        </h1>
+      </div>
+      <div class="hidden md:flex text-xs text-slate-400 font-mono items-center gap-4">
+        <span>ra (<= 目標值) / ro (>= 目標值) 雙檢定</span>
+        <span>•</span>
+        <span>與基準同向 ➔ 深入 (+1)</span>
+        <span>•</span>
+        <span>與基準反向 ➔ 退回 (-1)</span>
+      </div>
+    </div>
+
+    <!-- 主內容區 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 flex-1 min-h-0">
+      
+      <!-- 左側：控制與參數設定欄 -->
+      <div class="col-span-1 md:col-span-4 bg-slate-950/60 border border-slate-800/80 rounded-2xl p-4 md:p-5 flex flex-col gap-4 overflow-y-auto">
+        
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-slate-400 tracking-wider uppercase border-b border-slate-800 pb-2 flex justify-between items-center">
+            <span>⚙️ 織夢參數設定</span>
+            <span class="text-[9px] text-slate-500 font-normal bg-slate-900 px-2 py-0.5 rounded">PC: [空白鍵]=1d100 / [1]=1d10</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="space-y-1">
+              <label class="block text-xs font-medium text-slate-300">擲骰次數</label>
+              <div class="flex items-center bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+                <button onclick="adjustCount(-1)" class="px-3 py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">-</button>
+                <input id="dice-count" type="number" min="1" max="20" value="1" class="w-full bg-transparent text-center text-sm md:text-xs font-bold text-amber-300 focus:outline-none" />
+                <button onclick="adjustCount(1)" class="px-3 py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">+</button>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label class="block text-xs font-medium text-slate-300">基礎加值 (Boost)</label>
+              <div class="flex items-center bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+                <button onclick="adjustBoost(-1)" class="px-3 py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">-</button>
+                <input id="base-boost" type="number" value="0" class="w-full bg-transparent text-center text-sm md:text-xs font-bold text-emerald-400 focus:outline-none" />
+                <button onclick="adjustBoost(1)" class="px-3 py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1d100 Boost 模式切換 -->
+          <div class="space-y-1">
+            <label class="block text-xs font-medium text-slate-300">1d100 Boost 模式</label>
+            <select id="boost-mode-100" onchange="saveSettings()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-colors">
+              <option value="v1">v1: 降面 1d(100-Boost) + Boost (保留CF)</option>
+              <option value="v2">v2: 原始 1d100 + Boost (保留CF)</option>
+              <option value="v3">v3: 降面 1d(100-Boost) + Boost (無CF)</option>
+            </select>
+          </div>
+
+          <div class="space-y-2 bg-slate-900/90 border border-slate-700/80 rounded-xl p-3">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold text-amber-400">🎯 檢定模式與目標值</label>
+              <span id="mode-desc" class="text-[10px] text-slate-400 font-mono">ra (<= 目標值成功)</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-2">
+              <div class="flex rounded-lg overflow-hidden border border-slate-700 bg-slate-950 p-0.5">
+                <button id="btn-mode-ra" onclick="setCheckMode('ra')" class="flex-1 py-1.5 md:py-1 text-xs font-bold rounded-md bg-indigo-600 text-white transition">ra (<=)</button>
+                <button id="btn-mode-ro" onclick="setCheckMode('ro')" class="flex-1 py-1.5 md:py-1 text-xs font-bold rounded-md text-slate-400 hover:text-white transition">ro (>=)</button>
+              </div>
+              <div class="flex items-center bg-slate-950 border border-slate-700 rounded-lg overflow-hidden px-2">
+                <span class="text-xs text-slate-500 font-bold mr-1">目標:</span>
+                <input id="target-value" type="number" min="1" max="100" value="50" class="w-full bg-transparent text-center text-sm md:text-xs font-bold text-amber-300 focus:outline-none" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 主要控制按鈕 -->
+        <div class="space-y-3 pt-1">
+          <button onclick="executeRoll('1d10')" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-bold rounded-2xl shadow-lg border border-indigo-400/30 transition-all flex flex-col items-center justify-center gap-1">
+            <span class="text-base tracking-wide">🎲 擲 1d10 安科連鎖</span>
+            <span class="text-[10px] text-indigo-200 opacity-80">1d2=1: 大成功 | 1d2=2: 大失敗</span>
+          </button>
+          <button onclick="executeRoll('1d100')" class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg border border-emerald-400/30 transition-all flex flex-col items-center justify-center gap-1">
+            <span class="text-base tracking-wide">🎯 擲 1d100 劇情判定 (ra/ro)</span>
+            <span class="text-[10px] text-emerald-200 opacity-80">1~5 ➔ 追擲 1d10 | 96~100 ➔ 大成功</span>
+          </button>
+        </div>
+
+        <!-- 通用標準骰子 -->
+        <div class="space-y-1.5 pt-3 border-t border-slate-800">
+          <span class="text-[11px] font-medium text-slate-500">通用標準骰子</span>
+          <div class="grid grid-cols-5 gap-2">
+            <button onclick="executeRoll('d4')" class="py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 rounded-xl text-xs text-slate-300 font-bold transition">d4</button>
+            <button onclick="executeRoll('d6')" class="py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 rounded-xl text-xs text-slate-300 font-bold transition">d6</button>
+            <button onclick="executeRoll('d8')" class="py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 rounded-xl text-xs text-slate-300 font-bold transition">d8</button>
+            <button onclick="executeRoll('d12')" class="py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 rounded-xl text-xs text-slate-300 font-bold transition">d12</button>
+            <button onclick="executeRoll('d20')" class="py-2 md:py-1.5 bg-slate-800 hover:bg-slate-700 rounded-xl text-xs text-slate-300 font-bold transition">d20</button>
+          </div>
+        </div>
+
+        <!-- 自動複製開關 -->
+        <div class="flex items-center justify-between bg-slate-900 border border-slate-700 rounded-xl p-3 mt-2 shrink-0">
+          <label class="text-xs font-bold text-slate-300 cursor-pointer flex-1" for="auto-copy-toggle">自動複製公式</label>
+          <input id="auto-copy-toggle" type="checkbox" onchange="saveSettings()" class="w-4 h-4 text-indigo-600 bg-slate-800 border-slate-600 rounded focus:ring-indigo-500 focus:ring-2 cursor-pointer accent-indigo-500">

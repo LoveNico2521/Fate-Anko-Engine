@@ -1,0 +1,1 @@
+const boost = Number(boostInput.value) || 0;

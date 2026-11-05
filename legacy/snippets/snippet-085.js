@@ -1,0 +1,1 @@
+const run = rollChainEngine(type, boost, targetVal, checkMode);

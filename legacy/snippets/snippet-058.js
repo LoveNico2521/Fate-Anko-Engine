@@ -1,0 +1,1 @@
+const final100 = raw100 + boost;

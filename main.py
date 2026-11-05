@@ -6,12 +6,10 @@ from tkinter import filedialog
 
 class Api:
     def save_csv(self, csv_content, default_name):
-        # 隱藏 root 視窗
         root = tk.Tk()
         root.withdraw()
-        root.attributes("-topmost", True) # 讓視窗置頂
+        root.attributes("-topmost", True)
 
-        # 彈出原生「另存新檔」視窗
         file_path = filedialog.asksaveasfilename(
             title="儲存織夢紀錄",
             initialfile=default_name,
@@ -25,7 +23,6 @@ class Api:
             return {"success": False, "canceled": True}
 
         try:
-            # 寫入檔案 (因為開頭已經有 BOM，所以這裡強制用 utf-8-sig)
             with open(file_path, 'w', encoding='utf-8-sig', newline='') as f:
                 f.write(csv_content)
             return {"success": True}
@@ -43,13 +40,16 @@ if __name__ == '__main__':
     html_path = get_resource_path('dice_machine.html')
     api = Api()
     
+    # 預設視窗改為 1600x900，最小高度設為 850
     window = webview.create_window(
         title='織夢者菲特《Fate》',
         url=html_path,
-        js_api=api, # 把 API 綁定到視窗
-        width=1280,
-        height=720,
+        js_api=api,
+        width=1600,
+        height=900, 
+        min_size=(1024, 850), 
         resizable=True,
+        easy_drag=True,
         fullscreen=False
     )
     

@@ -1,0 +1,1 @@
+saveSettings(); // 这个用 boostInput.value，不是 boost 变量

@@ -21,17 +21,15 @@
 
 | 檔案 | 說明 |
 |---|---|
-| `v4-final.html` | **最新完整版**（644 行），日常使用請開這個 |
-| `v1.html` ~ `v3.html` | 開發過程中的迭代版本，留作參考 |
-| `main.py` | 桌面視窗模式（pywebview + tkinter 存檔對話框） |
-| `run_webview_v1.py` / `run_webview_v2.py` | 舊版簡易啟動器 |
-| `exportHistoryToCSV.js` | CSV 匯出函式獨立參考副本（已內建於 v4-final.html） |
+| `fate-anko-engine.html` | **最新完整版**（對話第 43 次迭代，41.4 KB） |
+| `main.py` | 桌面視窗模式（pywebview + tkinter 存檔對話框，最新迭代） |
+| `legacy/` | **完整開發歷史存檔**（見下方說明） |
 
 ## 使用方式
 
 ### 直接使用（推薦）
 
-雙擊 `v4-final.html` 以瀏覽器開啟即可，完全離線可用。
+雙擊 `fate-anko-engine.html` 以瀏覽器開啟即可，完全離線可用。
 
 ### 桌面視窗模式
 
@@ -40,11 +38,23 @@ pip install pywebview
 python main.py
 ```
 
-## 開發沿革
+打包成單一 exe 後可發佈到 GitHub Releases（`pyinstaller --onefile main.py`）。
 
-本專案由 DeepSeek 對話迭代產生，四個版本的完整快照都保留在倉庫中：
+## legacy/ — 完整開發歷史
 
-1. **v1**（2.4 KB）— 初版原型
-2. **v2**（29 KB）— 加入完整樣式與歷史紀錄
-3. **v3**（31 KB）— 總和計算與連鎖顯示強化
-4. **v4**（31.6 KB）— 加入 CSV 匯出、詳情摺疊面板，為目前最終版
+本專案由 DeepSeek 對話迭代產生，對話中共有 **43 個完整版 HTML**（2.3 KB 原型 →
+41.4 KB 完整系統）、**9 個 Python 包裝迭代**、**229 個過程片段**，全部保存在
+[`legacy/`](./legacy/)：
+
+```
+legacy/
+├── full-versions/    v01.html ~ v43.html（依對話順序，v43 = 最新版）
+├── desktop/          py-01.py ~ py-09.py（py-09 = 最新 main.py）
+├── snippets/         229 個講解／修改過程片段
+├── deepseek-readme-draft.md
+├── manifest.json     全部區塊的順序與摘要
+└── README.md
+```
+
+早期倉庫版本對應：v14 = 舊 v1、v15 = 舊 v2、v16 = 舊 v3、v17 = 舊 v4-final。
+日常使用只需要根目錄的 `fate-anko-engine.html`，legacy 是完整的開發考古層。

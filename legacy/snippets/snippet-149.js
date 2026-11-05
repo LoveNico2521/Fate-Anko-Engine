@@ -1,0 +1,3 @@
+<div class="col-span-1 md:col-span-8 flex flex-col space-y-4 min-h-0">
+    <div class="flex-1 bg-slate-950/80 border border-slate-800 rounded-2xl p-4 md:p-5 flex flex-col relative overflow-hidden shadow-inner min-h-[300px] md:min-h-0">
+    ...

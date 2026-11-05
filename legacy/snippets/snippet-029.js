@@ -1,0 +1,1 @@
+setCheckMode(s.mode || 'ra');

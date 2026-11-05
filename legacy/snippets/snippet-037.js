@@ -1,0 +1,1 @@
+historyLog.innerHTML = history.map(item => `...`).join('');

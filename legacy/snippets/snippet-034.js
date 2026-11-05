@@ -1,0 +1,1 @@
+if (e.target.tagName === 'BUTTON') return;

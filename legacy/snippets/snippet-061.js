@@ -1,0 +1,1 @@
+totalSum += s.final;
