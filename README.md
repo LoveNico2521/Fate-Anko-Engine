@@ -4,6 +4,8 @@
 
 ![版本](https://img.shields.io/badge/引擎版本-v43-5B8DEF) ![平台](https://img.shields.io/badge/平台-瀏覽器_·_Windows-4C9F70) ![離線](https://img.shields.io/badge/離線-完全可用-E8B93E)
 
+**F.A.T.E.** = **F**ated **A**nko **T**ale **E**ngine（命定安科物語引擎）
+
 一顆為安科／安價而生的骰子。整個系統就是**一個 HTML 檔**——不用安裝、不用連網，
 瀏覽器打開，菲特就開始織。深色介面，手機也能滾。
 
@@ -50,6 +52,14 @@ python main.py
 | `main.py` | 桌面視窗版（pywebview） |
 | `CHANGELOG.md` | 43 個版本怎麼長成現在這樣，逐版寫清楚 |
 | `legacy/` | 開發考古層：43 個 HTML 迭代、9 個 Python、229 個片段，索引見 `legacy/manifest.json` |
+
+## Roadmap
+
+- ✅ **v43（現行）** — 連鎖引擎、ra／ro、三種 1d100 Boost、織夢紀錄、CSV 匯出
+- 🔭 多組連鎖並行的 UI 可讀性優化
+- 🔭 3D 骰子動畫平滑度
+- 🔭 更多自訂 TRPG 規則
+- 🔭 自動化歷史匯出
 
 ---
 
