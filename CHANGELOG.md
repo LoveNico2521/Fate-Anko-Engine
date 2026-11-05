@@ -1,13 +1,28 @@
 # 更新日誌（Change Log）
 
-> 由 43 個歷史版本自動逐行比對產生（2026-11-06）。**v01 為最早版本，v43 為現行最新版**（根目錄 `fate-anko-engine.html`）。
+> 由 43 個歷史版本自動逐行比對產生（2026-11-06）。**v01 為最早版本，v44 為現行最新版**（根目錄 `fate-anko-engine.html`）。
 > 對話分享頁沒有時間戳記，故以版本序號排列（新 → 舊）。行數統計為與前一版的逐行 diff。
+> v44 起為人工功能開發（露米），不再只來自對話迭代。
 
 版本對照：v14 = 舊 v1、v15 = 舊 v2、v16 = 舊 v3、v17 = 舊 v4-final。
 
 ---
 
-## v43 — 最新版
+## v44 — 最新版（首個人工功能版）
+
+- 大小：41437 → 58565 字元（+17128）
+- 新增函式：copyText、encodeVerifyCode、decodeVerifyCode、applyVerifyCode、copyPostAs、openSettings、closeSettings、switchSettingsTab、loadPresets、savePresets、updatePresetCaptureDesc、savePreset、applyPreset、deletePreset、renderPresets、loadStats、saveStats、renderStats、parseCSVLine、parseHistoryCSV、importHistoryCSV
+- 新增按鈕／事件：openSettings、copyPostAs、closeSettings、switchSettingsTab、savePreset、applyPreset、deletePreset、importHistoryCSV
+- **新功能①複製發文**：歷史區新增「發文 MD／發文 BB」按鈕，把全部紀錄轉成 Markdown／BBCode（含時間、摘要、軌跡、驗證碼），時間正序方便貼文
+- **新功能②骰組模板**：⚙️ 設定頁可把目前設定（次數/Boost/模式/目標值/1d100模式）存成命名模板；主畫面出現快捷列一鍵套用；localStorage 持久化
+- **新功能③戰績統計**：歷史區標題即時顯示累計 ✨大成功／💥大失敗 Stacks（localStorage 持久化）
+- **新功能④推演驗證碼**：每次推演產生 `F1-` 編碼（實際骰值序列＋總和檢查碼），歷史列顯示 🔑 chip，點擊即解碼填入測試序列並複製——可跨裝置完整重現，對付「骰子是不是假的」質疑
+- **新功能⑤歷史匯入**：設定頁貼上 CSV 即合併匯入，自動去重（CSV 新增第 4 欄「驗證碼」，舊 3 欄格式仍可匯入）
+- UI：頂部列加 ⚙️ 設定按鈕與 v44 版本標記；getRnd 改為記錄實際消費的骰值（驗證碼基礎，不改變隨機行為）
+
+---
+
+## v43
 
 - 大小：41511 → 41437 字元（-74）｜與 v42 diff：+7 −8 行
 - 新增動畫：soft-drop

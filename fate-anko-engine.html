@@ -62,18 +62,21 @@
     <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-3 gap-2 shrink-0">
       <div class="flex items-center gap-3">
         <div class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-xl text-indigo-400 font-black text-sm tracking-wider uppercase shadow-[0_0_10px_rgba(99,102,241,0.2)]">
-          織夢機
+          織夢機 <span class="text-[9px] text-slate-500 font-mono align-top">v44</span>
         </div>
         <h1 class="text-xl md:text-2xl font-black bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
           織夢者菲特《Fate》
         </h1>
       </div>
-      <div class="hidden md:flex text-xs text-slate-400 font-mono items-center gap-4">
-        <span>ra (<= 目標值) / ro (>= 目標值) 雙檢定</span>
-        <span>•</span>
-        <span>與基準同向 ➔ 深入 (+1)</span>
-        <span>•</span>
-        <span>與基準反向 ➔ 退回 (-1)</span>
+      <div class="flex items-center gap-3">
+        <div class="hidden lg:flex text-xs text-slate-400 font-mono items-center gap-4">
+          <span>ra (<= 目標值) / ro (>= 目標值) 雙檢定</span>
+          <span>•</span>
+          <span>與基準同向 ➔ 深入 (+1)</span>
+          <span>•</span>
+          <span>與基準反向 ➔ 退回 (-1)</span>
+        </div>
+        <button onclick="openSettings()" title="設定：骰組模板／資料匯入" class="shrink-0 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-bold text-slate-300 transition">⚙️ 設定</button>
       </div>
     </div>
 
@@ -161,6 +164,12 @@
           </div>
         </div>
 
+        <!-- 骰組模板快捷列 -->
+        <div id="preset-quickbar" class="hidden space-y-1.5 pt-3 border-t border-slate-800">
+          <span class="text-[11px] font-medium text-slate-500">⭐ 骰組模板（於 ⚙️ 設定管理）</span>
+          <div id="preset-quickbar-list" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
         <!-- 自動複製開關 -->
         <div class="flex items-center justify-between bg-slate-900 border border-slate-700 rounded-xl p-3 mt-2 shrink-0">
           <label class="text-xs font-bold text-slate-300 cursor-pointer flex-1" for="auto-copy-toggle">自動複製公式</label>
@@ -216,9 +225,12 @@
 
         <!-- 歷史紀錄區域 -->
         <div class="h-40 md:h-44 bg-slate-950/50 border border-slate-800/80 rounded-2xl p-4 flex flex-col min-h-0 space-y-2 shrink-0">
-          <div class="flex justify-between items-center text-xs text-slate-400">
-            <span class="font-bold flex items-center gap-1.5">📜 安科織夢歷史紀錄 (點擊複製)</span>
-            <div class="flex items-center gap-1 md:gap-2">
+          <div class="flex justify-between items-center text-xs text-slate-400 gap-2">
+            <span class="font-bold flex items-center gap-1.5 shrink-0">📜 安科織夢歷史紀錄 (點擊複製)</span>
+            <span id="stats-badges" class="flex items-center gap-1"></span>
+            <div class="flex items-center gap-1 md:gap-2 shrink-0">
+              <button onclick="copyPostAs('md')" title="以 Markdown 格式複製全部紀錄（發文用）" class="text-indigo-400 hover:text-indigo-300 bg-indigo-500/10 hover:bg-indigo-500/20 px-2 py-1 rounded transition">發文 MD</button>
+              <button onclick="copyPostAs('bb')" title="以 BBCode 格式複製全部紀錄（論壇用）" class="text-sky-400 hover:text-sky-300 bg-sky-500/10 hover:bg-sky-500/20 px-2 py-1 rounded transition">發文 BB</button>
               <button onclick="exportHistoryToCSV()" class="text-emerald-500 hover:text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-2 py-1 rounded transition">匯出 CSV</button>
               <button onclick="askClearHistory()" class="text-slate-500 hover:text-slate-300 underline px-2 py-1">清除</button>
             </div>
@@ -230,6 +242,51 @@
 
       </div>
 
+    </div>
+  </div>
+
+  <!-- 設定頁 Modal -->
+  <div id="settings-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[280]">
+    <div class="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl max-w-lg w-full mx-4 flex flex-col max-h-[85vh]">
+      <div class="flex justify-between items-center border-b border-slate-700 px-5 py-3 shrink-0">
+        <div class="text-base font-black text-slate-100">⚙️ 設定</div>
+        <button onclick="closeSettings()" class="text-slate-400 hover:text-slate-100 text-xl leading-none px-2">×</button>
+      </div>
+      <div class="flex border-b border-slate-700 shrink-0">
+        <button id="tab-btn-presets" onclick="switchSettingsTab('presets')" class="flex-1 py-2 text-xs font-bold text-indigo-300 border-b-2 border-indigo-500">⭐ 骰組模板</button>
+        <button id="tab-btn-data" onclick="switchSettingsTab('data')" class="flex-1 py-2 text-xs font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-200">📥 資料</button>
+      </div>
+
+      <div id="tab-presets" class="p-5 space-y-4 overflow-y-auto">
+        <div class="text-xs text-slate-400 leading-relaxed">
+          把常用的骰組（次數／Boost／模式／目標值）存成模板，之後一鍵套用。
+        </div>
+        <div id="presets-list" class="space-y-2"></div>
+        <div class="border-t border-slate-700 pt-3 space-y-2">
+          <label class="block text-xs font-bold text-slate-300">將目前設定存為新模板</label>
+          <div class="flex gap-2">
+            <input id="preset-name-input" type="text" placeholder="模板名稱，例: 入隊檢定" class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500" />
+            <button onclick="savePreset()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-bold text-white transition shrink-0">儲存</button>
+          </div>
+          <div id="preset-capture-desc" class="text-[10px] text-slate-500 font-mono"></div>
+        </div>
+      </div>
+
+      <div id="tab-data" class="hidden p-5 space-y-4 overflow-y-auto">
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-slate-300">📥 匯入織夢歷史（CSV）</label>
+          <div class="text-xs text-slate-400 leading-relaxed">
+            貼上由「匯出 CSV」產生的內容（含標題列），重複的紀錄會自動略過。
+          </div>
+          <textarea id="import-csv-text" rows="6" placeholder='時間,摘要,詳細骰子軌跡,驗證碼
+"10:24","1x 1d100 …","…","F1-…"' class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs font-mono text-slate-200 focus:outline-none focus:border-indigo-500"></textarea>
+          <div class="flex justify-end gap-2">
+            <button onclick="document.getElementById('import-csv-text').value=''" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded-lg text-xs font-bold text-slate-300 transition">清空</button>
+            <button onclick="importHistoryCSV()" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-xs font-bold text-white transition">匯入</button>
+          </div>
+          <div id="import-result" class="text-xs"></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -260,7 +317,10 @@
     const historyLog = document.getElementById('history-log');
     const totalSummary = document.getElementById('total-summary');
     const debugSeqInput = document.getElementById('debug-seq');
-    const autoCopyToggle = document.getElementById('auto-copy-toggle'); 
+    const autoCopyToggle = document.getElementById('auto-copy-toggle');
+
+    let presets = [];
+    let stats = { cs: 0, cf: 0 };
     
     document.addEventListener('contextmenu', e => e.preventDefault());
 
@@ -416,13 +476,17 @@
     }
 
     function getRnd(max, debugSeq, state) {
+      let val;
       if (debugSeq && debugSeq.length > 0 && state.index < debugSeq.length) {
-        let val = debugSeq[state.index++];
+        val = debugSeq[state.index++];
         if (val > max) val = max;
         if (val < 1) val = 1;
-        return val;
+      } else {
+        val = Math.floor(Math.random() * max) + 1;
       }
-      return Math.floor(Math.random() * max) + 1;
+      if (!Array.isArray(state.used)) state.used = [];
+      state.used.push(val);
+      return val;
     }
 
     function rollChainEngine(startType, boost, targetVal, mode, debugSeq, state, boostMode100) {
@@ -740,8 +804,18 @@
       const sumText = totalSummary.classList.contains('hidden') ? '' : ` ｜ 總和: ${totalSum}`;
       const debugText = isDebug ? '[🧪測試] ' : '';
       const summaryText = `${debugText}${count}x ${type}${boostText} [${checkMode.toUpperCase()}:${targetVal}] ➔ 淨計: ${totalSuccessStacks}成功 / ${totalFailStacks}失敗${sumText}`;
-      
-      addHistory(summaryText, detailText);
+
+      // 戰績統計（累計）
+      stats.cs += totalSuccessStacks;
+      stats.cf += totalFailStacks;
+      saveStats();
+      renderStats();
+
+      // 推演驗證碼：記錄實際消費的骰值序列，可完整重現
+      const usedSeq = Array.isArray(debugState.used) ? debugState.used : [];
+      const verifyCode = encodeVerifyCode(usedSeq);
+
+      addHistory(summaryText, detailText, verifyCode);
 
       if (autoCopyToggle.checked) {
         const parts = allRuns.map(run => {
@@ -778,10 +852,10 @@
       }
     }
 
-    function addHistory(summary, detail) {
+    function addHistory(summary, detail, code) {
       const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      history.unshift({ time: now, summary: summary, detail: detail });
-      if (history.length > 200) history.pop(); 
+      history.unshift({ time: now, summary: summary, detail: detail, code: code || '' });
+      if (history.length > 200) history.pop();
       saveHistory();
       renderHistory();
     }
@@ -802,6 +876,7 @@
               <span class="text-[10px] text-slate-500 shrink-0">${item.time}</span>
             </div>
             ${dText ? `<span class="text-[10px] text-indigo-300 font-mono leading-tight break-all bg-indigo-950/30 px-2 py-1 rounded border-l-2 border-indigo-500/50 pointer-events-none">${dText}</span>` : ''}
+            ${item.code ? `<span class="text-[10px] font-mono text-fuchsia-300 bg-fuchsia-950/40 border border-fuchsia-500/40 rounded px-1.5 py-0.5 cursor-pointer hover:bg-fuchsia-900/50 transition-colors self-start" title="點擊：解碼骰值序列並填入測試欄（可完整重現這次推演）" onclick="event.stopPropagation(); applyVerifyCode('${item.code}')">🔑 ${item.code}</span>` : ''}
           </div>
         `;
       }).join('');
@@ -810,9 +885,10 @@
     function copyHistory(index) {
       const item = history[index];
       if (!item) return;
-      
+
       let textToCopy = item.summary;
       if (item.detail) textToCopy += `\n詳細軌跡：${item.detail}`;
+      if (item.code) textToCopy += `\n驗證碼：${item.code}（在設定→測試序列貼入可重現）`;
       
       navigator.clipboard.writeText(textToCopy).then(() => {
         showToast('📋 已複製到剪貼簿喵！', 'success');
@@ -837,15 +913,17 @@
         return;
       }
       
-      let csvContent = "\uFEFF時間,摘要,詳細骰子軌跡\n";
+      let csvContent = "\uFEFF時間,摘要,詳細骰子軌跡,驗證碼\n";
       const reversedHistory = [...history].reverse();
-      
+
       reversedHistory.forEach(item => {
         const sText = item.summary || item.text || '';
         const dText = item.detail || '';
+        const vCode = item.code || '';
         const safeSummary = `"${sText.replace(/"/g, '""')}"`;
         const safeDetail = `"${dText.replace(/"/g, '""')}"`;
-        csvContent += `${item.time},${safeSummary},${safeDetail}\n`;
+        const safeCode = `"${vCode.replace(/"/g, '""')}"`;
+        csvContent += `${item.time},${safeSummary},${safeDetail},${safeCode}\n`;
       });
 
       const defaultFileName = `Fate_DreamWeaver_Log_${new Date().toISOString().slice(0,10)}.csv`;
@@ -872,6 +950,306 @@
         }
       }
     }
+
+    // ===== v44：剪貼簿共用 =====
+    function copyText(text, successMsg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(successMsg, 'success');
+      }).catch(() => {
+        try {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+          showToast(successMsg, 'success');
+        } catch (e) {
+          showToast('❌ 複製失敗了喵...', 'error');
+        }
+      });
+    }
+
+    // ===== v44：推演驗證碼 =====
+    function encodeVerifyCode(vals) {
+      if (!Array.isArray(vals) || vals.length === 0) return '';
+      const body = vals.map(v => Math.max(0, Math.min(1295, v)).toString(36).padStart(2, '0')).join('');
+      const sum = vals.reduce((a, b) => a + b, 0) % 1296;
+      return `F1-${body}-${sum.toString(36).padStart(2, '0')}`;
+    }
+
+    function decodeVerifyCode(code) {
+      try {
+        if (typeof code !== 'string' || !code.startsWith('F1-')) return null;
+        const parts = code.slice(3).split('-');
+        if (parts.length !== 2) return null;
+        const body = parts[0];
+        if (body.length % 2 !== 0) return null;
+        const vals = [];
+        for (let i = 0; i < body.length; i += 2) {
+          const v = parseInt(body.slice(i, i + 2), 36);
+          if (isNaN(v)) return null;
+          vals.push(v);
+        }
+        const sum = vals.reduce((a, b) => a + b, 0) % 1296;
+        if (parseInt(parts[1], 36) !== sum) return null;
+        return vals;
+      } catch (e) { return null; }
+    }
+
+    function applyVerifyCode(code) {
+      const vals = decodeVerifyCode(code);
+      if (!vals) { showToast('❌ 驗證碼格式錯誤或已損毀喵。', 'error'); return; }
+      debugSeqInput.value = vals.join(', ');
+      copyText(vals.join(', '), '🧪 骰值序列已填入測試欄並複製，下一次擲骰將完整重現喵！');
+    }
+
+    // ===== v44：複製發文格式 =====
+    function copyPostAs(fmt) {
+      if (!Array.isArray(history) || history.length === 0) {
+        showToast('❌ 目前沒有紀錄可以複製喵！', 'error');
+        return;
+      }
+      const now = new Date();
+      const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      const items = [...history].reverse(); // 時間正序，方便貼文閱讀
+
+      let out;
+      if (fmt === 'md') {
+        out = `📜 **織夢者菲特《Fate》 — 安科推演紀錄**\n（${dateStr} · 共 ${items.length} 筆）\n\n`;
+        items.forEach((item, i) => {
+          out += `**${i + 1}. [${item.time}]** ${item.summary}\n`;
+          if (item.detail) out += `   - 軌跡：\`${item.detail}\`\n`;
+          if (item.code) out += `   - 驗證：\`${item.code}\`\n`;
+        });
+      } else {
+        out = `[b]📜 織夢者菲特《Fate》 — 安科推演紀錄[/b]\n（${dateStr} · 共 ${items.length} 筆）\n[list]\n`;
+        items.forEach((item, i) => {
+          out += `[*][b]${i + 1}. [${item.time}][/b] ${item.summary}\n`;
+          if (item.detail) out += `[code]${item.detail}[/code]\n`;
+          if (item.code) out += `驗證：${item.code}\n`;
+        });
+        out += `[/list]\n`;
+      }
+      copyText(out.trim(), fmt === 'md' ? '📋 已複製 Markdown 發文格式喵！' : '📋 已複製 BBCode 發文格式喵！');
+    }
+
+    // ===== v44：設定頁 =====
+    function openSettings() {
+      renderPresets();
+      updatePresetCaptureDesc();
+      renderStats();
+      const modal = document.getElementById('settings-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      switchSettingsTab('presets');
+    }
+
+    function closeSettings() {
+      const modal = document.getElementById('settings-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function switchSettingsTab(tab) {
+      const tabPresets = document.getElementById('tab-presets');
+      const tabData = document.getElementById('tab-data');
+      const btnPresets = document.getElementById('tab-btn-presets');
+      const btnData = document.getElementById('tab-btn-data');
+      if (tab === 'presets') {
+        tabPresets.classList.remove('hidden'); tabData.classList.add('hidden');
+        btnPresets.className = 'flex-1 py-2 text-xs font-bold text-indigo-300 border-b-2 border-indigo-500';
+        btnData.className = 'flex-1 py-2 text-xs font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-200';
+      } else {
+        tabData.classList.remove('hidden'); tabPresets.classList.add('hidden');
+        btnData.className = 'flex-1 py-2 text-xs font-bold text-emerald-300 border-b-2 border-emerald-500';
+        btnPresets.className = 'flex-1 py-2 text-xs font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-200';
+      }
+    }
+
+    // ===== v44：骰組模板 =====
+    function loadPresets() {
+      const p = safeGet('fate_dreamweaver_presets', []);
+      presets = Array.isArray(p) ? p : [];
+    }
+
+    function savePresets() {
+      safeSet('fate_dreamweaver_presets', presets);
+    }
+
+    function updatePresetCaptureDesc() {
+      const desc = document.getElementById('preset-capture-desc');
+      if (!desc) return;
+      desc.innerText = `將擷取：次數 ${countInput.value} · B:${boostInput.value} · ${checkMode.toUpperCase()}:${targetValueInput.value} · 1d100模式:${boostMode100Input.value}（骰種由按下哪顆按鈕決定）`;
+    }
+
+    function savePreset() {
+      const nameInput = document.getElementById('preset-name-input');
+      const name = (nameInput.value || '').trim();
+      if (!name) { showToast('❌ 請先輸入模板名稱喵。', 'error'); return; }
+      presets.push({
+        name,
+        count: Number(countInput.value) || 1,
+        boost: Number(boostInput.value) || 0,
+        target: Number(targetValueInput.value) || 50,
+        mode: checkMode,
+        boostMode100: boostMode100Input.value
+      });
+      savePresets();
+      nameInput.value = '';
+      renderPresets();
+      showToast(`⭐ 模板「${name}」已儲存喵！`, 'success');
+    }
+
+    function applyPreset(index) {
+      const p = presets[index];
+      if (!p) return;
+      countInput.value = p.count;
+      boostInput.value = p.boost;
+      targetValueInput.value = p.target;
+      boostMode100Input.value = p.boostMode100 || 'v2';
+      setCheckMode(p.mode || 'ra');
+      saveSettings();
+      showToast(`⭐ 已套用模板「${p.name}」喵！`, 'success');
+    }
+
+    function deletePreset(index) {
+      const p = presets[index];
+      if (!p) return;
+      presets.splice(index, 1);
+      savePresets();
+      renderPresets();
+      showToast(`🗑️ 模板「${p.name}」已刪除喵。`, 'info');
+    }
+
+    function renderPresets() {
+      const quickbar = document.getElementById('preset-quickbar');
+      const quickList = document.getElementById('preset-quickbar-list');
+      const list = document.getElementById('presets-list');
+
+      if (!Array.isArray(presets) || presets.length === 0) {
+        quickbar.classList.add('hidden');
+        quickList.innerHTML = '';
+        list.innerHTML = '<div class="text-xs text-slate-500 text-center py-3">尚無模板——用下面的表單把目前設定存起來。</div>';
+        return;
+      }
+
+      quickbar.classList.remove('hidden');
+      quickList.innerHTML = presets.map((p, i) =>
+        `<button onclick="applyPreset(${i})" class="px-2.5 py-1 bg-indigo-950/60 hover:bg-indigo-900 border border-indigo-500/40 rounded-lg text-[11px] font-bold text-indigo-300 transition">${p.name}</button>`
+      ).join('');
+
+      list.innerHTML = presets.map((p, i) => {
+        const desc = `${p.count}x ${p.mode.toUpperCase()}:${p.target} · B:${p.boost >= 0 ? '+' : ''}${p.boost} · 1d100:${p.boostMode100}`;
+        return `
+          <div class="flex items-center justify-between gap-2 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2">
+            <div class="min-w-0">
+              <div class="text-xs font-bold text-slate-200 truncate">${p.name}</div>
+              <div class="text-[10px] text-slate-500 font-mono truncate">${desc}</div>
+            </div>
+            <div class="flex gap-1 shrink-0">
+              <button onclick="applyPreset(${i})" class="px-2.5 py-1 bg-indigo-600 hover:bg-indigo-500 rounded text-[10px] font-bold text-white transition">套用</button>
+              <button onclick="deletePreset(${i})" class="px-2 py-1 bg-slate-700 hover:bg-rose-600 rounded text-[10px] font-bold text-slate-300 hover:text-white transition">刪</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ===== v44：戰績統計 =====
+    function loadStats() {
+      const s = safeGet('fate_dreamweaver_stats', null);
+      stats = (s && typeof s.cs === 'number' && typeof s.cf === 'number') ? s : { cs: 0, cf: 0 };
+    }
+
+    function saveStats() {
+      safeSet('fate_dreamweaver_stats', stats);
+    }
+
+    function renderStats() {
+      const el = document.getElementById('stats-badges');
+      if (!el) return;
+      if (!stats || (stats.cs === 0 && stats.cf === 0)) { el.innerHTML = ''; return; }
+      el.innerHTML = `
+        <span class="px-1.5 py-0.5 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 rounded text-[10px] font-mono" title="歷年累計大成功 Stacks">✨${stats.cs}</span>
+        <span class="px-1.5 py-0.5 bg-rose-950/60 border border-rose-500/40 text-rose-400 rounded text-[10px] font-mono" title="歷年累計大失敗 Stacks">💥${stats.cf}</span>
+      `;
+    }
+
+    // ===== v44：歷史匯入（CSV 貼上） =====
+    function parseCSVLine(line) {
+      const out = [];
+      let cur = '';
+      let inQuote = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (inQuote) {
+          if (ch === '"') {
+            if (line[i + 1] === '"') { cur += '"'; i++; }
+            else inQuote = false;
+          } else cur += ch;
+        } else {
+          if (ch === '"') inQuote = true;
+          else if (ch === ',') { out.push(cur); cur = ''; }
+          else cur += ch;
+        }
+      }
+      out.push(cur);
+      return out;
+    }
+
+    function parseHistoryCSV(text) {
+      const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter(l => l.trim() !== '');
+      if (lines.length === 0) return [];
+      const items = [];
+      lines.forEach((line, idx) => {
+        const cols = parseCSVLine(line);
+        if (idx === 0 && cols[0] && cols[0].includes('時間')) return; // 標題列
+        const time = (cols[0] || '').trim();
+        const summary = (cols[1] || '').trim();
+        const detail = (cols[2] || '').trim();
+        const code = (cols[3] || '').trim();
+        if (!summary && !detail) return;
+        items.push({ time, summary, detail, code: code.startsWith('F1-') ? code : '' });
+      });
+      return items;
+    }
+
+    function importHistoryCSV() {
+      const text = document.getElementById('import-csv-text').value;
+      const resultEl = document.getElementById('import-result');
+      const imported = parseHistoryCSV(text);
+      if (imported.length === 0) {
+        resultEl.innerHTML = '<span class="text-rose-400">❌ 沒有解析到有效紀錄——請確認是「匯出 CSV」的內容。</span>';
+        return;
+      }
+      const keyOf = it => `${it.time}|${it.summary}|${it.detail}|${it.code || ''}`;
+      const existing = new Set(history.map(keyOf));
+      let added = 0, skipped = 0;
+      // 匯入檔為時間正序 → 反轉後逐一插入，維持「最新在最上」的列表慣例
+      [...imported].reverse().forEach(it => {
+        if (existing.has(keyOf(it))) { skipped++; return; }
+        existing.add(keyOf(it));
+        history.push(it);
+        added++;
+      });
+      while (history.length > 200) history.pop();
+      saveHistory();
+      renderHistory();
+      resultEl.innerHTML = `<span class="text-emerald-400">✅ 匯入 ${added} 筆，略過重複 ${skipped} 筆。</span>`;
+      if (added > 0) showToast(`📥 已匯入 ${added} 筆織夢紀錄喵！`, 'success');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSettings();
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadPresets();
+      renderPresets();
+      loadStats();
+      renderStats();
+    });
 
     document.addEventListener('keydown', function(e) {
       const tag = e.target.tagName;
