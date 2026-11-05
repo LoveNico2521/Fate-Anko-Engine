@@ -23,6 +23,7 @@
 |---|---|
 | `fate-anko-engine.html` | **最新完整版**（對話第 43 次迭代，41.4 KB） |
 | `main.py` | 桌面視窗模式（pywebview + tkinter 存檔對話框，最新迭代） |
+| `CHANGELOG.md` | **逐版更新日誌**（43 個 HTML 迭代 + 9 個 Python 迭代的差異比對） |
 | `legacy/` | **完整開發歷史存檔**（見下方說明） |
 
 ## 使用方式
